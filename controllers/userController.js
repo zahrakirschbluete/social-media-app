@@ -7,13 +7,18 @@ exports.login = (req, res) => {
             favColor: "blue",
             username: user.data.username
         }
-        res.send(result)
+        req.session.save(() => {
+            res.redirect('/')
+        })
     }).catch((err) => {
         res.send(err)
     })
 }
 
-exports.logout = () => {
+exports.logout = (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/');
+    });
 
 }
 
