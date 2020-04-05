@@ -1,16 +1,16 @@
 const {
-    CONNECTION_STRING
+  CONNECTION_STRING
 } = require('./cs.config')
 
 const mongodb = require('mongodb');
 mongodb.connect(
-    CONNECTION_STRING, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    },
-    (err, client) => {
-        module.exports = client.db();
-        const app = require("./app");
-        app.listen(3000);
-    }
+  CONNECTION_STRING, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  },
+  (err, client) => {
+    module.exports = client;
+    const app = require("./app");
+    app.listen(3000);
+  }
 );
