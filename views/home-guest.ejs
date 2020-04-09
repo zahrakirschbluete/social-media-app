@@ -39,7 +39,9 @@
   <!-- header ends here -->
 
   <div class=" ">
-
+    <% errors.forEach((message) => { %>
+    <div class="alert alert-danger position-absolute" style="z-index: 2; right: 30%"><%= message %></div>
+    <% }) %>
     <div class="row align-items-center">
       <div class="col-lg-6 ">
         <ul class="list-unstyled" style="position: absolute; left: 25%; top: 15%;">
@@ -51,6 +53,9 @@
       </div>
       <div class="col-lg-5 p-5">
         <form action="/register" method="POST" id="registration-form">
+          <% regErrors.forEach((message) => { %>
+          <div class="alert alert-danger small"><%= message %></div>
+          <% }) %>
 
           <div class="form-group">
             <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
