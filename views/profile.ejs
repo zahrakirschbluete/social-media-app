@@ -15,18 +15,13 @@
     </div>
 
     <div class="list-group">
-        <a href="<%= profileAvatar %>" class="list-group-item list-group-item-action">
-            <img class="avatar-tiny" src="<%= profileAvatar %>">
-            <strong>Example Post #1</strong> on 0/13/2019
+        <% posts.forEach((post) => { %>
+        <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+            <img class="avatar-tiny" src="<%= post.author.avatar %>">
+            <strong><%= post.title %></strong>
+            <%= post.createdDate.getMonth() + 1%>/<%= post.createdDate.getDate() %>/<%= post.createdDate.getFullYear() %>
         </a>
-        <a href="/post/5c3af3dcc7d0ad0004e53b3d" class="list-group-item list-group-item-action">
-            <img class="avatar-tiny" src="<%= profileAvatar %>">
-            <strong>Example Post #2</strong> on 0/13/2019
-        </a>
-        <a href="/post/5c3af3dcc7d0ad0004e53b3d" class="list-group-item list-group-item-action">
-            <img class="avatar-tiny" src="<%= profileAvatar %>">
-            <strong>Example Post #3</strong> on 0/13/2019
-        </a>
+        <% }) %>
     </div>
 </div>
 <%- include('includes/footer') %>
