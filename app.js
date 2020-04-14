@@ -27,7 +27,7 @@ app.use((req, res, next) => {
   res.locals.filterUserHTML = function (content) {
     return sanitizteHTML(markdown(content), {
       allowedTags: ['p', 'br', 'ul', 'ol', 'li', 'strong', 'bold', 'i', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'],
-      allowedAttributes = {}
+      allowedAttributes: {}
     })
   }
   // make all error and success flash messages available for all view templates
