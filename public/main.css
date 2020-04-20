@@ -193,7 +193,7 @@ textarea.tall-textarea {
 }
 
 .search-overlay-icon {
-  color: #007bff;
+  color: #6175DE;
   font-size: 1.4rem;
   margin: 0;
   margin-right: 10px;
@@ -207,7 +207,7 @@ textarea.tall-textarea {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #007bff;
+  color: black;
 }
 
 .live-search-results {
@@ -446,5 +446,12 @@ textarea.tall-textarea {
   border: none;
   outline: none;
   font-size: .75rem;
+}
+
+.list-group--custom {
+  z-index: 2;
+  color: #fff;
+  background-color: #6175DE;
+  border-color: #6175DE;
 }
 /*# sourceMappingURL=main.css.map */

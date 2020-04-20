@@ -183,7 +183,7 @@ textarea.tall-textarea {
 }
 
 .search-overlay-icon {
-  color: #007bff;
+  color: $primary-color;
   font-size: 1.4rem;
   margin: 0;
   margin-right: 10px;
@@ -195,7 +195,7 @@ textarea.tall-textarea {
   font-size: 1.1rem;
   outline: none;
   flex: 1;
-  color: #007bff;
+  color: black;
 }
 
 .live-search-results {
@@ -397,4 +397,12 @@ textarea.tall-textarea {
   border: none;
   outline: none;
   font-size: .75rem;
+}
+
+.list-group--custom {
+  z-index: 2;
+  color: #fff;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
 }
