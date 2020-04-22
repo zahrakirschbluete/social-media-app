@@ -184,7 +184,7 @@ Follow.countFollowersById = function (id) {
 Follow.countFollowingById = function (id) {
     return new Promise(async (resolve, reject) => {
         let count = await followsCollection.countDocuments({
-            followingId: id
+            authorId: id
         })
         resolve(count)
     })
