@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= typeof(title) == "undefined"  ? 'Social Media App' : `Social Media App - ${title}` %></title>
+    <title><%= typeof(title) == "undefined"  ? 'WeJournal' : `${title}` %> | WeJournal</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"
@@ -13,12 +13,13 @@
         crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
+    <link rel="icon" href="../../public/images/wj.ico">
 </head>
 
 <body>
     <header class="header-bar">
         <div class="container d-flex flex-column flex-md-row align-items-center p-3">
-            <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">Social Media App</a></h4>
+            <h4 class="my-0 mr-md-auto font-weight-normal"><a href="/" class="text-white">WeJournal</a></h4>
 
             <% if(user) { %>
             <div class="flex-row my-3 my-md-0">
@@ -29,7 +30,7 @@
                 <a href="/profile/<%= user.username%>" class="mr-2"><img title="My Profile" data-toggle="tooltip"
                         data-placement="bottom" style="width: 32px; height: 32px; border-radius: 16px;"
                         src="<%= user.avatar %>"></a>
-                <a class="btn btn-sm btn-success mr-2" href="/create-post">Create Post</a>
+                <a class="btn btn-sm btn-custom-primary mr-2" href="/create-post">Create Post</a>
                 <form action="/logout" method="POST" class="d-inline">
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
                     <button class="btn btn-sm btn-secondary">Sign Out</button>
