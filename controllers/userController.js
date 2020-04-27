@@ -18,7 +18,7 @@ exports.apiGetPostsByUsername = async function (req, res) {
 
 exports.apiMustBeLoggedIn = function (req, res, next) {
     try {
-        req.apiUser = jwt.verify(req.body.token, JWTSECRET)
+        req.apiUser = jwt.verify(req.body.token, process.env.JWTSECRET)
         next()
     } catch {
         res.json("Sorry, you must provide a valid token.")
