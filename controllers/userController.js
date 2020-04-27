@@ -2,9 +2,9 @@ const User = require("../models/User");
 const Post = require("../models/Post");
 const Follow = require("../models/Follow");
 const jwt = require('jsonwebtoken')
-const {
-    JWTSECRET
-} = require('../cs.config')
+// const {
+//     JWTSECRET
+// } = require('../cs.config')
 
 exports.apiGetPostsByUsername = async function (req, res) {
     try {

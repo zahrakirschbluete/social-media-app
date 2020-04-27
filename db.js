@@ -1,6 +1,6 @@
-const {
-  CONNECTION_STRING
-} = require('./cs.config')
+// const {
+//   CONNECTION_STRING
+// } = require('./cs.config')
 
 const mongodb = require('mongodb');
 mongodb.connect(
